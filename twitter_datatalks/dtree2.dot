@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="president <= 0.5\nentropy = 1.393\nsamples = 26181\nvalue = [9126, 13771, 3284]"] ;
+1 [label="hillary <= 0.5\nentropy = 1.348\nsamples = 22317\nvalue = [6020, 13258, 3039]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="great <= 0.5\nentropy = 1.323\nsamples = 21496\nvalue = [6018, 12902, 2576]"] ;
+1 -> 2 ;
+3 [label="entropy = 1.361\nsamples = 19772\nvalue = [5959, 11299, 2514]"] ;
+2 -> 3 ;
+4 [label="entropy = 0.437\nsamples = 1724\nvalue = [59, 1603, 62]"] ;
+2 -> 4 ;
+5 [label="clinton <= 0.5\nentropy = 1.01\nsamples = 821\nvalue = [2, 356, 463]"] ;
+1 -> 5 ;
+6 [label="entropy = 0.927\nsamples = 658\nvalue = [1, 215, 442]"] ;
+5 -> 6 ;
+7 [label="entropy = 0.607\nsamples = 163\nvalue = [1, 141, 21]"] ;
+5 -> 7 ;
+8 [label="obama <= 0.5\nentropy = 0.892\nsamples = 3864\nvalue = [3106, 513, 245]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="obamas <= 0.5\nentropy = 1.477\nsamples = 1133\nvalue = [574, 339, 220]"] ;
+8 -> 9 ;
+10 [label="entropy = 1.542\nsamples = 936\nvalue = [400, 320, 216]"] ;
+9 -> 10 ;
+11 [label="entropy = 0.598\nsamples = 197\nvalue = [174, 19, 4]"] ;
+9 -> 11 ;
+12 [label="hillary <= 0.5\nentropy = 0.416\nsamples = 2731\nvalue = [2532, 174, 25]"] ;
+8 -> 12 ;
+13 [label="entropy = 0.39\nsamples = 2718\nvalue = [2532, 169, 17]"] ;
+12 -> 13 ;
+14 [label="entropy = 0.961\nsamples = 13\nvalue = [0, 5, 8]"] ;
+12 -> 14 ;
+}

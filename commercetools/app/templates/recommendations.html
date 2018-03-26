@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<style>
+
+.bought {
+    height: 240px;
+    padding: 50px;
+}
+.bought > div {
+    text-align: center;
+    width: 140px;
+    display: inline-block;
+    float: left;
+}
+.bought p {
+    margin: 20;
+}
+
+.header{
+    font-family:sans-serif;
+    text-align:left;
+}
+
+
+</style>
+
+<html>	
+    <head>
+        <center>  <h2> Welcome User {{userid}}! </h2>  </center>
+    </head>
+
+
+    <div class = "header">
+        <h3>Items You've Bought</h3>
+    </div>
+
+    <div class="bought">
+        {% for item in items_bought %}
+            <div id= {{item.name}}>
+                <img src= {{ item.img_url }} alt= {{item.name}}  width='150'/>
+                <p> {{ item.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+    <div class = "header">
+        <h3 > Recommended For You</h3>
+    </div>
+
+    <div class="bought">
+            {% for item in items_recom %}
+                <div id= {{item.name}}>
+                    <img src= {{ item.img_url }} alt= {{item.name}}  width='150'/>
+                    <p> {{ item.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</html>
